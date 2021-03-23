@@ -1,4 +1,6 @@
 import express, { Express, json, Request, Response } from 'express';
+import Cors from 'cors';
+import Routes from './routes';
 
 interface AppConfig {
     PORT?: number
@@ -37,12 +39,12 @@ class App {
                 }
             });
         });
-        // this.main.use('/api/v1', Routes);
+        this.main.use('/api/v1', Routes);
     }
 
     private config(): void{
         this.main.use(json());
-        // this.main.use(Cors());
+        this.main.use(Cors());
     }
 
 }
