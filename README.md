@@ -1,0 +1,1 @@
+# Pratica de typescript com repository pattern
