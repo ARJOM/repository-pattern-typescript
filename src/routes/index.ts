@@ -1,7 +1,8 @@
 import { Router } from 'express';
+import UserRoutes from './UserRoutes';
 
 const routes = Router();
 
-// preencher com rotas adicionadas
+routes.use(UserRoutes);
 
 export default routes;
